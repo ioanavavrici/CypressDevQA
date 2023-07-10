@@ -3,7 +3,7 @@
 describe('Test example', () => {
   beforeEach(() => {
         //Navigate to main mage
-        cy.visit('https://iwanttohelp.bim.assistcloud.services/')
+        cy.visit('https://amprenta.at.assistcloud.services/')
   })
         //Test if the main page is loaded
   it('Navigate to Despe noi page', () => {
