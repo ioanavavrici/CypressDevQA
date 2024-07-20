@@ -46,5 +46,6 @@ class Login{
         this.password(password_value);
         this.submit()
     }
+
 }
 export default Login
