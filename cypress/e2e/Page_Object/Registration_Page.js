@@ -52,7 +52,7 @@ class Registration {
     }
 
     verifyRegistrationUrl() {
-        cy.url().should('include', '``````````````````/inregistrare');
+        cy.url().should('include', '/inregistrare');
     }
 
     verifyLoginUrl() {
