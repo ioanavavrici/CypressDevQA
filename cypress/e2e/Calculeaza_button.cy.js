@@ -34,16 +34,8 @@ it('Add a fixed number of cars and then select "No"', () => {
     let index = Cypress._.random(1, 30);
     cy.get('select').first().select(index);
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-    cy.get('select').then($select => {
-      const optionsCount = $select.prop('childElementCount')
-      const randomIndex = Cypress._.random(0, optionsCount - 1)
-      cy.log(optionsCount)
-      if(randomIndex==0)
-      {
-        cy.get('select').select()
-      }
-      cy.get('select').select(randomIndex)
-    });
+    index = Cypress._.random(1, 30);
+    cy.get('select').select(index);
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     cy.get(':nth-child(1) > .checkbox > input').check();
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
@@ -88,10 +80,10 @@ it('Add a fixed number of cars and then select "No"', () => {
     cy.get(':nth-child(1) > .checkbox > input').check();
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     const addFlights = () => {
-      index = Cypress._.random(0, 42);
+      index = Cypress._.random(0, 20);
       cy.get('select').select(index);
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-      index = Cypress._.random(0, 42);
+      index = Cypress._.random(0, 20);
       cy.get('select').select(index);
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     }
