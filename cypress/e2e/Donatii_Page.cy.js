@@ -7,14 +7,14 @@ describe(('Donatii page flow'), () => {
     
     const donatii = new Donatii()
     const login=new Login()
-    it.skip(('Images text and buttons are visible'), () => {
+    it(('Images text and buttons are visible'), () => {
 
         donatii.checkVisibility()
 
     })
 
     for (let i = 1; i <= 5; i++) {
-        it.skip(`Check functionality of button ${i}`, () => {
+        it(`Check functionality of button ${i}`, () => {
             donatii.functionalityButtons(i);
         });
     }
