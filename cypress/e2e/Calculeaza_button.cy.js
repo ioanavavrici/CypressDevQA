@@ -1,7 +1,4 @@
 describe('Calculeaza button flow', () => {
-  beforeEach(() => {
-
-  })
 
 
   it('Transport Questions Flow with All No Responses', () => {
@@ -50,6 +47,7 @@ it('Add a fixed number of cars and then select "No"', () => {
       cy.get('#fuel_consumption').type(Cypress._.random(0, 100).toString());
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     };
+    
 
 
     for (let i = 0; i < numberOfCarsToAdd; i++) {
