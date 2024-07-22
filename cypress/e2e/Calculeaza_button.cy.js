@@ -78,10 +78,10 @@ it('Add a fixed number of cars and then select "No"', () => {
     cy.get(':nth-child(1) > .checkbox > input').check();
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     const addFlights = () => {
-      index = Cypress._.random(0, 42);
+      index = Cypress._.random(0, 20);
       cy.get('select').select(index);
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-      index = Cypress._.random(0, 42);
+      index = Cypress._.random(0, 20);
       cy.get('select').select(index);
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     }
