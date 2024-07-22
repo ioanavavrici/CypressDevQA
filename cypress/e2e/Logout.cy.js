@@ -3,22 +3,21 @@ import Logout from "./Page_Object/Logout";
 import Navigation from "./Page_Object/Navigation_page";
 
 describe('Verify logout button', () => {
+
     const login = new Login();
     const logout = new Logout();
-    const navigate=new Navigation();
+    const navigate = new Navigation();
 
-    it('Click logout button', () => {
+    it('Should log the user out successfully', () => {
         cy.fixture('User_data').then((data) => {
             login.Log_In(data.email, data.password);
             logout.logout();
-            navigate.navigateToAboutUs();
+            logout.validation();
         });
     });
-    
-    it('Verify that the logout button is not on the page when not logged in', () => {
+
+    it('Should not show logout button for logged-out users', () => {
         navigate.navigateToAboutUs();
         cy.get('.auth-user>svg').should('not.exist');
     });
-
-
 });

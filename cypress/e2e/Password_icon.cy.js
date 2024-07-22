@@ -1,8 +1,8 @@
-var passwordBox=':nth-child(4) > .input-wrapper > .input-container > .input-field'
+var passwordBox = ':nth-child(4) > .input-wrapper > .input-container > .input-field'
 
 describe('Password', () => {
-  it('Show and Hide Password', function() {
 
+  it('Show and Hide Password', function () {
     cy.visit('https://amprenta.at.assistcloud.services/inregistrare');
     cy.get(passwordBox).as('passwordField').type('parola123');
     cy.get('.left-icon > svg').click();

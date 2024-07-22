@@ -1,5 +1,6 @@
 // test.spec.js
 describe('Check the Registration Functionality', () => {
+
     const first_nameSelector = ':nth-child(1) > .input-wrapper > .input-container > .input-field';
     const last_nameSelector = ':nth-child(2) > .input-wrapper > .input-container > .input-field';
     const emailSelector = ':nth-child(3) > .input-wrapper > .input-container > .input-field';
@@ -20,7 +21,6 @@ describe('Check the Registration Functionality', () => {
     }
 
     it('Registration with Valid Information', () => {
-
         cy.get(first_nameSelector).type(RandomName(5));
         cy.get(last_nameSelector).type(RandomName(5));
         cy.get(emailSelector).type('test' + Cypress._.random(1, 1000000) + '@gmail.com')
@@ -28,8 +28,8 @@ describe('Check the Registration Functionality', () => {
         cy.get('.auth-register-button-try').click();
         cy.url().should('include', '/conectare');
     });
-    it('Registration with an existing email', () => {
 
+    it('Registration with an existing email', () => {
         cy.get(first_nameSelector).type(RandomName(5));
         cy.get(last_nameSelector).type(RandomName(5));
         cy.fixture('User_data').then((userData) => {
@@ -51,8 +51,8 @@ describe('Check the Registration Functionality', () => {
         cy.url().should('include', '/inregistrare');
         cy.get('.errorMessage').should('contain.text', 'Introdu o adresa de email corecta. E.g. example@email.com.')
     });
-    it('Registration with Empty Fields', () => {
 
+    it('Registration with Empty Fields', () => {
         cy.get(first_nameSelector).clear();
         cy.get(last_nameSelector).clear();
         cy.get(emailSelector).clear();
@@ -60,5 +60,4 @@ describe('Check the Registration Functionality', () => {
         cy.get('.auth-register-button-try').click();
         cy.url().should('include', '/inregistrare');
     });
-
 });

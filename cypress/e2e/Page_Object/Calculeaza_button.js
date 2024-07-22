@@ -1,4 +1,5 @@
 class Calculeaza {
+
     constructor() {
         this.downArrowSelector = '.transport-question_transportQuestion_DownArrow__EF\\+9C';
     }
@@ -6,17 +7,16 @@ class Calculeaza {
     navigate() {
         cy.visit('https://amprenta.at.assistcloud.services');
     }
-    
-  
+
     navigate2() {
-    cy.visit('https://amprenta.at.assistcloud.services/gospodarie/1039')
+        cy.visit('https://amprenta.at.assistcloud.services/gospodarie/1039')
     }
-    
-    navigate3(){
+
+    navigate3() {
         cy.visit('https://amprenta.at.assistcloud.services/mancare/1049')
     }
-    click()
-    {
+
+    click() {
         cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     }
 
@@ -28,9 +28,8 @@ class Calculeaza {
         const index = Cypress._.random(0, range);
         if (index == 0) {
             cy.get(selector).select(1);
-          }
-          cy.get(selector).select(index);
-      
+        }
+        cy.get(selector).select(index);
     }
 
     first_clicks_and_validation() {
@@ -45,18 +44,18 @@ class Calculeaza {
         this.selectRandomOption('select', 10);
         this.click()
         this.selectRandomOption('select', 6);
-         this.click()
+        this.click()
     }
-    checkYES()
-    {
+
+    checkYES() {
         cy.get(':nth-child(1) > .checkbox > input').check();
         this.click()
     }
-    checkNO()
-    {
+
+    checkNO() {
         cy.get(':nth-child(2) > .checkbox > input').check();
-        
     }
+
     checkOption(selector) {
         cy.get(selector).check();
     }
@@ -71,14 +70,25 @@ class Calculeaza {
     }
 
     AddCars(numberOfCarsToAdd) {
-        for (let i =0; i < numberOfCarsToAdd; i++) {
+        for (let i = 0; i < numberOfCarsToAdd; i++) {
             this.addCar();
-            if (i < numberOfCarsToAdd-1 ) 
+            if (i < numberOfCarsToAdd - 1)
                 this.checkOption(':nth-child(1) > .checkbox > input');
-           
-        }  this.checkNO();
+
+        } this.checkNO();
     }
 
+    validateTransportFunctionality() {
+        cy.get('.transport-section_transportSection_ModalBody__bkFyy > :nth-child(3)').should('be.visible')
+    }
+
+    validateHouseholdFunctionality() {
+        cy.get('.transport-section_transportSection_ModalBody__bkFyy > :nth-child(2)').should('be.visible')
+    }
+
+    validateFoodSectionFunctionality() {
+        cy.get('.Card_Card_Container__szFkU').should('be.visible')
+    }
 
     AddFlights(numberOfFlightsToAdd) {
         for (let i = 0; i < numberOfFlightsToAdd; i++) {
@@ -87,13 +97,14 @@ class Calculeaza {
                 this.checkOption(':nth-child(1) > .checkbox > input');
             }
         }
+        this.checkNO()
     }
 
     publicT() {
         cy.get('#total_km').type(Cypress._.random(0, 100000).toString());
         this.click();
         this.selectRandomOption('select', 1);
-       this.click()
+        this.click()
     }
 
     PublicTransport(numberOfPublicTransportsToAdd) {
@@ -102,7 +113,7 @@ class Calculeaza {
             if (i < numberOfPublicTransportsToAdd - 1) {
                 this.checkOption(':nth-child(1) > .checkbox > input');
             }
-        }this.checkOption(':nth-child(2) > .checkbox > input');
+        } this.checkOption(':nth-child(2) > .checkbox > input');
     }
 
     HouseQuastion() {
@@ -111,7 +122,7 @@ class Calculeaza {
         cy.get('#natural_gas').type(Cypress._.random(0, 10000).toString());
         this.click()
         cy.get('#wood').type(Cypress._.random(0, 10000).toString());
-       this.click()
+        this.click()
     }
 
     FoodSection() {
@@ -125,6 +136,7 @@ class Calculeaza {
 
             this.clickAndValidate(this.downArrowSelector);
         }
+        cy.get('.button-try').click()
     }
 }
 

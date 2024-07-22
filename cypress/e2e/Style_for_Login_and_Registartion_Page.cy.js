@@ -1,6 +1,7 @@
 describe('Form Style Tests', () => {
 
     context('Login Form Style Tests', () => {
+        
         beforeEach(() => {
             cy.visit('https://amprenta.at.assistcloud.services/conectare');
         });

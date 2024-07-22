@@ -1,10 +1,13 @@
-class Logout{
+class Logout {
 
-    logout()
-    {
+    logout() {
         cy.get('.auth-user>svg').click()
         cy.wait(1000)
-        cy.url().should('contain','/conectare')
+    }
+    
+    validation()
+    {
+        cy.url().should('contain', '/conectare')
     }
 
 }

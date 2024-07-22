@@ -1,6 +1,5 @@
 describe('Calculeaza button flow', () => {
 
-
   it('Transport Questions Flow with All No Responses', () => {
     cy.visit('https://amprenta.at.assistcloud.services')
     cy.get(':nth-child(1) > .button-try').should('be.visible');
@@ -18,9 +17,9 @@ describe('Calculeaza button flow', () => {
     cy.get(':nth-child(2) > .checkbox > input').check();
     cy.get(':nth-child(2) > .checkbox > input').check();
     cy.get(':nth-child(2) > .checkbox > input').check();
-
   });
-it('Add a fixed number of cars and then select "No"', () => {
+
+  it('Add a fixed number of cars and then select "No"', () => {
     const numberOfCarsToAdd = 5;
     cy.visit('https://amprenta.at.assistcloud.services');
     cy.get(':nth-child(1) > .button-try').should('be.visible').click();
@@ -36,9 +35,7 @@ it('Add a fixed number of cars and then select "No"', () => {
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     cy.get(':nth-child(1) > .checkbox > input').check();
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-
     const addCar = () => {
-
       cy.get('#total_km').type(Cypress._.random(0, 100000).toString());
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
       index = Cypress._.random(0, 4);
@@ -47,18 +44,15 @@ it('Add a fixed number of cars and then select "No"', () => {
       cy.get('#fuel_consumption').type(Cypress._.random(0, 100).toString());
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     };
-    
-
-
     for (let i = 0; i < numberOfCarsToAdd; i++) {
       addCar();
       if (i < numberOfCarsToAdd - 1) {
         cy.get(':nth-child(1) > .checkbox > input').check();
       }
     }
-
     cy.get(':nth-child(2) > .checkbox > input').check();
   });
+
   it('Add a fixed number of flights and then select "No"', () => {
     const numberOfCarsToAdd = 5;
     cy.visit('https://amprenta.at.assistcloud.services')
@@ -91,7 +85,6 @@ it('Add a fixed number of cars and then select "No"', () => {
         cy.get(':nth-child(1) > .checkbox > input').check();
       }
     }
-
     cy.get(':nth-child(2) > .checkbox > input').check();
   });
 
@@ -114,7 +107,6 @@ it('Add a fixed number of cars and then select "No"', () => {
     cy.get(':nth-child(2) > .checkbox > input').check();
     cy.get(':nth-child(1) > .checkbox > input').check();
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-
     const publicT = () => {
       cy.get('#total_km').type(Cypress._.random(0, 100000))
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
@@ -131,15 +123,10 @@ it('Add a fixed number of cars and then select "No"', () => {
         cy.get(':nth-child(1) > .checkbox > input').check();
       }
     }
-
     cy.get(':nth-child(2) > .checkbox > input').check();
   });
 
-
-
   it('Household Questions Flow', () => {
-
-
     cy.visit('https://amprenta.at.assistcloud.services/gospodarie/1039')
     cy.get('.button-try').click()
     cy.get('#electricity').type(Cypress._.random(0, 10000));
@@ -148,9 +135,8 @@ it('Add a fixed number of cars and then select "No"', () => {
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
     cy.get('#wood').type(Cypress._.random(0, 10000));
     cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-
-
   });
+
   it('Food sections Questions Flow', () => {
     cy.visit('https://amprenta.at.assistcloud.services/mancare/1049')
     cy.get('.button-try').click()
@@ -161,14 +147,10 @@ it('Add a fixed number of cars and then select "No"', () => {
           const randomIndex = Cypress._.random(0, $radios.length - 1);
           cy.wrap($radios.get(randomIndex)).check();
         });
-
       cy.get('.transport-question_transportQuestion_DownArrow__EF\\+9C').click();
-
     }
     cy.get('.button-try').click();
   });
-
-  
 });
 
 
