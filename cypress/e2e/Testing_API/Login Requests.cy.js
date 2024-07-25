@@ -1,31 +1,27 @@
 describe('Authentication Tests', function () {
     let emailValues = [];
     let passwordValues = [];
-    let currentIndex = 0;
+    let currentIndex = -1;
 
-    before(() => {
+    before(() => { 
+        
+       
         cy.fixture('credentials').then((data) => {
             emailValues = data.emails;
             passwordValues = data.passwords;
-            currentIndex = Cypress.env('currentIndex') || 0;
-        });
+            
+        }); 
+        
     });
 
-    it('Should handle authentication requests sequentially', () => {
-        if (currentIndex >= emailValues.length) {
-            currentIndex = 0;
-        }
+  
+    context('Valid Credentials', () => {
 
-        const requests = emailValues.map((email, index) => {
-            const password = passwordValues[index % passwordValues.length];
-            return {
-                email,
-                password
-            };
-        });
-
-        cy.wrap(requests).each(({ email, password }) => {
-            cy.log(`Sending request for email: ${email} with password: ${password}`);
+        it('Should authenticate with valid email and password', function() {
+            currentIndex ++;
+            const email = emailValues[currentIndex];
+            const password = passwordValues[currentIndex % passwordValues.length];
+            cy.log(email)
             cy.request({
                 method: 'POST',
                 url: 'users/sign_in',
@@ -36,23 +32,57 @@ describe('Authentication Tests', function () {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-
-            failOnStatusCode: false
+                failOnStatusCode: false
             }).then((response) => {
-                cy.log(`Response for email: ${email} with status code: ${response.status}`);
-                if (response.status === 201) {
-                    expect(response.body).to.have.property('auth_token');
-                } else if (response.status === 401) {
-                    expect(response.body).to.have.property('error_msg');
-                    expect(response.body.error_msg).to.equal('Invalid Credentials');
-                } else {
-                    throw new Error('Unexpected status code: ' + response.status);
-                }
+               
+                expect(response.status).to.eq(201);
+                expect(response.body).to.have.property('auth_token'); 
+               
+               
             });
+        });
+    });
 
-        }).then(() => {
-            Cypress.env('currentIndex', (currentIndex + emailValues.length) % emailValues.length);
-            cy.log('All requests have been handled.');
+    context('Invalid Credentials', () => {
+        it('Should return an error with invalid credentials', function() {
+            currentIndex ++;
+            const email = emailValues[currentIndex];
+            const password = passwordValues[currentIndex % passwordValues.length];
+            cy.request({
+                method: 'POST',
+                url: 'users/sign_in',
+                body: {
+                    email: email,
+                    password: password
+                },
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                failOnStatusCode: false
+            }).then((response) => {
+                expect(response.status).to.eq(401);
+                expect(response.body).to.have.property('error_msg');
+                expect(response.body.error_msg).to.equal('Invalid Credentials');
+            });
+        });
+    });
+
+    context('No Credentials', () => {
+        it('Should return an error when no credentials are provided', function() {
+
+            cy.request({
+                method: 'POST',
+                url: 'users/sign_in',
+                body: {},
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                failOnStatusCode: false
+            }).then((response) => {
+                expect(response.status).to.eq(400); 
+                expect(response.body).to.have.property('error_msg');
+                expect(response.body.error_msg).to.equal('email is missing, password is missing');
+            });
         });
     });
 });
