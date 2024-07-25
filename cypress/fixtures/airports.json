@@ -1,0 +1,366 @@
+[
+  {
+    "id": 0,
+    "name": "Dubai City"
+  },
+  {
+    "id": 1,
+    "name": "Kabul"
+  },
+  {
+    "id": 2,
+    "name": "Canberra"
+  },
+  {
+    "id": 3,
+    "name": "Wellcamp"
+  },
+  {
+    "id": 4,
+    "name": "Sarajevo"
+  },
+  {
+    "id": 5,
+    "name": "Brussels"
+  },
+  {
+    "id": 6,
+    "name": "Sofia"
+  },
+  {
+    "id": 7,
+    "name": "Varna"
+  },
+  {
+    "id": 8,
+    "name": "Minsk"
+  },
+  {
+    "id": 9,
+    "name": "Kitchener"
+  },
+  {
+    "id": 10,
+    "name": "Zurich"
+  },
+  {
+    "id": 11,
+    "name": "Villavicencio"
+  },
+  {
+    "id": 12,
+    "name": "Bremen"
+  },
+  {
+    "id": 13,
+    "name": "Dortmund"
+  },
+  {
+    "id": 14,
+    "name": "Duesseldorf"
+  },
+  {
+    "id": 15,
+    "name": "Frankfurt-am-Main"
+  },
+  {
+    "id": 16,
+    "name": "Hamburg"
+  },
+  {
+    "id": 17,
+    "name": "Leipzig"
+  },
+  {
+    "id": 18,
+    "name": "Munich"
+  },
+  {
+    "id": 19,
+    "name": "Stuttgart"
+  },
+  {
+    "id": 20,
+    "name": "Aarhus"
+  },
+  {
+    "id": 21,
+    "name": "Karup"
+  },
+  {
+    "id": 22,
+    "name": "Rønne"
+  },
+  {
+    "id": 23,
+    "name": "Sønderborg"
+  },
+  {
+    "id": 24,
+    "name": "Marigot"
+  },
+  {
+    "id": 25,
+    "name": "Punta Cana"
+  },
+  {
+    "id": 26,
+    "name": "Guayaquil"
+  },
+  {
+    "id": 27,
+    "name": "Málaga"
+  },
+  {
+    "id": 28,
+    "name": "Barcelona"
+  },
+  {
+    "id": 29,
+    "name": "Bilbao"
+  },
+  {
+    "id": 30,
+    "name": "Ibiza Town"
+  },
+  {
+    "id": 31,
+    "name": "Palma De Mallorca"
+  },
+  {
+    "id": 32,
+    "name": "Sta Cruz de la Palma"
+  },
+  {
+    "id": 33,
+    "name": "Seville"
+  },
+  {
+    "id": 34,
+    "name": "Tenerife Island"
+  },
+  {
+    "id": 35,
+    "name": "Valencia"
+  },
+  {
+    "id": 36,
+    "name": "Zaragoza"
+  },
+  {
+    "id": 37,
+    "name": "Paris"
+  },
+  {
+    "id": 38,
+    "name": "La Rochelle"
+  },
+  {
+    "id": 39,
+    "name": "Lyon"
+  },
+  {
+    "id": 40,
+    "name": "Marseille"
+  },
+  {
+    "id": 41,
+    "name": "Nice"
+  },
+  {
+    "id": 42,
+    "name": "Cambridge"
+  },
+  {
+    "id": 43,
+    "name": "Edinburgh"
+  },
+  {
+    "id": 44,
+    "name": "Glasgow"
+  },
+  {
+    "id": 45,
+    "name": "London"
+  },
+  {
+    "id": 46,
+    "name": "Manchester"
+  },
+  {
+    "id": 47,
+    "name": "Hong Kong"
+  },
+  {
+    "id": 48,
+    "name": "Dubrovnik"
+  },
+  {
+    "id": 49,
+    "name": "Debrecen"
+  },
+  {
+    "id": 50,
+    "name": "Sármellék"
+  },
+  {
+    "id": 51,
+    "name": "Dublin"
+  },
+  {
+    "id": 52,
+    "name": "Jaipur"
+  },
+  {
+    "id": 53,
+    "name": "Baghdad"
+  },
+  {
+    "id": 54,
+    "name": "Tabriz"
+  },
+  {
+    "id": 55,
+    "name": "Reykjavik"
+  },
+  {
+    "id": 56,
+    "name": "Bergamo"
+  },
+  {
+    "id": 57,
+    "name": "Crotone"
+  },
+  {
+    "id": 58,
+    "name": "Parma"
+  },
+  {
+    "id": 59,
+    "name": "Venice"
+  },
+  {
+    "id": 60,
+    "name": "Sukagawa"
+  },
+  {
+    "id": 61,
+    "name": "Makinohara"
+  },
+  {
+    "id": 62,
+    "name": "Osaka"
+  },
+  {
+    "id": 63,
+    "name": "Rotterdam"
+  },
+  {
+    "id": 64,
+    "name": "Łódź"
+  },
+  {
+    "id": 65,
+    "name": "Lublin"
+  },
+  {
+    "id": 66,
+    "name": "Funchal"
+  },
+  {
+    "id": 67,
+    "name": "Lisbon"
+  },
+  {
+    "id": 68,
+    "name": "Vila Baleira"
+  },
+  {
+    "id": 69,
+    "name": "Istanbul"
+  },
+  {
+    "id": 70,
+    "name": "Taipei"
+  },
+  {
+    "id": 71,
+    "name": "Bloomington"
+  },
+  {
+    "id": 72,
+    "name": "Bozeman"
+  },
+  {
+    "id": 73,
+    "name": "Columbus"
+  },
+  {
+    "id": 74,
+    "name": "Denver"
+  },
+  {
+    "id": 75,
+    "name": "Dallas-Fort Worth"
+  },
+  {
+    "id": 76,
+    "name": "Panama City Beach"
+  },
+  {
+    "id": 77,
+    "name": "El Paso"
+  },
+  {
+    "id": 78,
+    "name": "Grand Canyon"
+  },
+  {
+    "id": 79,
+    "name": "Peach Springs"
+  },
+  {
+    "id": 80,
+    "name": "Great Falls"
+  },
+  {
+    "id": 81,
+    "name": "New York"
+  },
+  {
+    "id": 82,
+    "name": "Roma"
+  },
+  {
+    "id": 83,
+    "name": "Milan"
+  },
+  {
+    "id": 84,
+    "name": "Bologna"
+  },
+  {
+    "id": 85,
+    "name": "Bruxelles"
+  },
+  {
+    "id": 86,
+    "name": "Shimada"
+  },
+  {
+    "id": 87,
+    "name": "Suceava"
+  },
+  {
+    "id": 88,
+    "name": "Iaşi"
+  },
+  {
+    "id": 89,
+    "name": "Cluj-Napoca"
+  },
+  {
+    "id": 90,
+    "name": "Bucharest"
+  }
+]
