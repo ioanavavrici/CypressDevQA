@@ -4,17 +4,12 @@ describe('Authentication Tests', function () {
     let currentIndex = -1;
 
     before(() => { 
-        
-       
         cy.fixture('credentials').then((data) => {
             emailValues = data.emails;
             passwordValues = data.passwords;
-            
         }); 
-        
     });
 
-  
     context('Valid Credentials', () => {
 
         it('Should authenticate with valid email and password', function() {
@@ -38,12 +33,12 @@ describe('Authentication Tests', function () {
                 expect(response.status).to.eq(201);
                 expect(response.body).to.have.property('auth_token'); 
                
-               
             });
         });
     });
 
     context('Invalid Credentials', () => {
+        
         it('Should return an error with invalid credentials', function() {
             currentIndex ++;
             const email = emailValues[currentIndex];
@@ -69,7 +64,6 @@ describe('Authentication Tests', function () {
 
     context('No Credentials', () => {
         it('Should return an error when no credentials are provided', function() {
-
             cy.request({
                 method: 'POST',
                 url: 'users/sign_in',
