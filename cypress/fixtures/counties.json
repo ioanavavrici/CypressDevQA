@@ -1,0 +1,174 @@
+[
+  {
+    "id": 0,
+    "name": "Alba"
+  },
+  {
+    "id": 1,
+    "name": "Arad"
+  },
+  {
+    "id": 2,
+    "name": "Argeş"
+  },
+  {
+    "id": 3,
+    "name": "Bacău"
+  },
+  {
+    "id": 4,
+    "name": "Bihor"
+  },
+  {
+    "id": 5,
+    "name": "Bistriţa-Năsăud"
+  },
+  {
+    "id": 6,
+    "name": "Botoşani"
+  },
+  {
+    "id": 7,
+    "name": "Brăila"
+  },
+  {
+    "id": 8,
+    "name": "Braşov"
+  },
+  {
+    "id": 9,
+    "name": "Bucureşti"
+  },
+  {
+    "id": 10,
+    "name": "Buzău"
+  },
+  {
+    "id": 11,
+    "name": "Călăraşi"
+  },
+  {
+    "id": 12,
+    "name": "Caraş-Severin"
+  },
+  {
+    "id": 13,
+    "name": "Cluj"
+  },
+  {
+    "id": 14,
+    "name": "Constanţa"
+  },
+  {
+    "id": 15,
+    "name": "Covasna"
+  },
+  {
+    "id": 16,
+    "name": "Dâmboviţa"
+  },
+  {
+    "id": 17,
+    "name": "Dolj"
+  },
+  {
+    "id": 18,
+    "name": "Galaţi"
+  },
+  {
+    "id": 19,
+    "name": "Giurgiu"
+  },
+  {
+    "id": 20,
+    "name": "Gorj"
+  },
+  {
+    "id": 21,
+    "name": "Harghita"
+  },
+  {
+    "id": 22,
+    "name": "Hunedoara"
+  },
+  {
+    "id": 23,
+    "name": "Ialomiţa"
+  },
+  {
+    "id": 24,
+    "name": "Iaşi"
+  },
+  {
+    "id": 25,
+    "name": "Ilfov"
+  },
+  {
+    "id": 26,
+    "name": "Maramureş"
+  },
+  {
+    "id": 27,
+    "name": "Mehedinţi"
+  },
+  {
+    "id": 28,
+    "name": "Mureş"
+  },
+  {
+    "id": 29,
+    "name": "Neamţ"
+  },
+  {
+    "id": 30,
+    "name": "Olt"
+  },
+  {
+    "id": 31,
+    "name": "Prahova"
+  },
+  {
+    "id": 32,
+    "name": "Sălaj"
+  },
+  {
+    "id": 33,
+    "name": "Satu"
+  },
+  {
+    "id": 34,
+    "name": "Mare"
+  },
+  {
+    "id": 35,
+    "name": "Sibiu"
+  },
+  {
+    "id": 36,
+    "name": "Suceava"
+  },
+  {
+    "id": 37,
+    "name": "Teleorman"
+  },
+  {
+    "id": 38,
+    "name": "Timiş"
+  },
+  {
+    "id": 39,
+    "name": "Tulcea"
+  },
+  {
+    "id": 40,
+    "name": "Vâlcea"
+  },
+  {
+    "id": 41,
+    "name": "Vaslui"
+  },
+  {
+    "id": 42,
+    "name": "Vrancea"
+  }
+]
